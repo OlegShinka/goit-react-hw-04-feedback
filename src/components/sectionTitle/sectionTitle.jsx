@@ -8,25 +8,13 @@ export const Section = ({
   good,
   neutral,
   bad,
-  onChangeGood,
-  onChangeNeutral,
-  onChangeBad,
   totalFeedback,
   percentGood,
 }) => {
   return (
     <div>
       <h2>Please leave feedback</h2>
-      <FeedbackOptions
-        onLeaveFeedBack={onLeaveFeedback}
-        options={options}
-        good={good}
-        neutral={neutral}
-        bad={bad}
-        onChangeGood={onChangeGood}
-        onChangeNeutral={onChangeNeutral}
-        onChangeBad={onChangeBad}
-      />
+      <FeedbackOptions onLeaveFeedBack={onLeaveFeedback} options={options} />
       {totalFeedback !== 0 ? (
         <Statistics
           good={good}

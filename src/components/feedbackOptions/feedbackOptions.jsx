@@ -1,6 +1,6 @@
 import { Btn } from './feedbackOptions.styled';
 
-export const FeedbackOptions = ({ options, onLeaveFeedBack, onChangeGood }) => {
+export const FeedbackOptions = ({ options, onLeaveFeedBack }) => {
   return (
     <div>
       {options.map((item, index) => (
@@ -8,7 +8,6 @@ export const FeedbackOptions = ({ options, onLeaveFeedBack, onChangeGood }) => {
           type="button"
           key={index}
           bgColor={item}
-          // onClick={onChangeGood}
           onClick={() => {
             //на подію виклик анонім фу яка поверне метод з аргументом item
             return onLeaveFeedBack(item);

@@ -10,33 +10,20 @@ export const App = () => {
     switch (type) {
       case 'good':
         setGood(prevState => prevState + 1);
-        console.log('good');
+
         break;
       case 'neutral':
         setNeutral(prevState => prevState + 1);
-        console.log('neutral');
+
         break;
       case 'bad':
         setBad(prevState => prevState + 1);
-        console.log('bad');
+
         break;
       default:
-        console.log('ups');
     }
-    // this.setState(prevState => ({
-    //   [type]: prevState[type] + 1,
-    // }));
   };
-  // const onChangeGood = () => {
-  //   //upDateFeedback(setGood(prevState => prevState + 1));
-  // };
-  // const onChangeNeutral = () => {
-  //   // upDateFeedback(setNeutral(prevState => prevState + 1));
-  //   //upDateFeedback('neutral');
-  // };
-  // const onChangeBad = () => {
-  //   // upDateFeedback(setBad(prevState => prevState + 1));
-  //   //upDateFeedback('bad');
+
   // };
   const countTotalFeedback = () => {
     return good + neutral + bad;
@@ -55,9 +42,6 @@ export const App = () => {
         bad={bad}
         totalFeedback={countTotalFeedback()}
         percentGood={countPositiveFeedbackPercentage()}
-        // onChangeGood={onChangeGood}
-        // onChangeNeutral={onChangeNeutral}
-        // onChangeBad={onChangeBad}
       />
     </div>
   );
